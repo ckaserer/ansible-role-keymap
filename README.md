@@ -4,6 +4,10 @@
 
 # ckaserer.keymap
 
+Set the keymap of your choice on your linux systems with the `ckaserer.keymap` ansible role.
+
+First you need to install the role on the node from which you will execute ansible via
+
 ```
 ansible-galaxy install ckaserer.keymap
 ```
@@ -11,8 +15,6 @@ ansible-galaxy install ckaserer.keymap
 ---
 
 ## Set the keymap
-
-Alternativly you can set `hosts` to a group of ansible nodes or `all`.
 
 ```
 - hosts: localhost
@@ -25,3 +27,5 @@ Alternativly you can set `hosts` to a group of ansible nodes or `all`.
         vars:
           keymap: de
 ```
+
+Alternativly you can set `hosts` to a group of ansible nodes or `all`.
