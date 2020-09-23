@@ -1,0 +1,15 @@
+---
+  - name: Verify
+    hosts: all
+    tasks:
+      - name: Get keymap
+        command: "localectl status"
+        changed_when: False
+        register: check_keymap
+
+      - name: Check keymap
+        assert:
+          that: 
+            - "'VC Keymap: de' in check_keymap.stdout"
+            - "'X11 Layout: de' in check_keymap.stdout"
+...

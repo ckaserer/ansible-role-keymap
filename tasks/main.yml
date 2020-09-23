@@ -1,0 +1,5 @@
+---
+  - name: Apply keymap {{ keymap }}
+    command: "localectl set-keymap {{ keymap }}"
+    changed_when: False
+...
